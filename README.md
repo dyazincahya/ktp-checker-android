@@ -1,3 +1,5 @@
+<img src="https://github.com/dyazincahya/ktp-checker-android/blob/main/screenshot/7.png" width="1080">
+
 # KTP Checker Android
 Aplikasi pengecekan nomor KTP berbasis android, 100% gratis, 100% mantap dan bebas iklan.
 
