@@ -1,0 +1,53 @@
+<Page
+    navigatingTo="onNavigatingTo"  
+    actionBarHidden="true"
+    xmlns="http://schemas.nativescript.org/tns.xsd">
+
+    <GridLayout rows="*,auto,auto,*">
+        <GridLayout rows="*,auto,auto,auto,auto,*" columns="30,*,30" row="1" visibility="{{ isSearchForm ? 'visible' : 'collapsed' }}">
+            <Image src="font://&#xf2c2;" color="#8130ff" width="75" decodeWidth="100" decodeHeight="100" loadMode="async" class="fas t-36" row="1" col="1" />
+            <TextField hint="Nama Lengkap" text="{{ fullname }}" color="#616161" backgroundColor="#F5F5F5" paddingLeft="25" borderWidth="0" borderRadius="25" marginTop="30" returnKeyType="next" height="50" row="2" col="1" />
+            <TextField hint="No. KTP" text="{{ nik }}" color="#616161" backgroundColor="#F5F5F5" paddingLeft="25" borderWidth="0" borderRadius="25" keyboardType="number" height="50" row="3" col="1" />
+            <Button text="CEK NO KTP" tap="ceknoktp" color="#FFF" backgroundColor="#8130ff" borderWidth="0" borderRadius="25" marginTop="35" marginLeft="35" marginRight="35" row="4" col="1" />
+        </GridLayout>
+        <ScrollView height="100%" width="100%" orientation="vertical" marginTop="60" row="2" visibility="{{ isResult ? 'visible' : 'collapsed' }}">
+            <StackLayout marginLeft="20" marginRight="20" marginBottom="70">
+                <Label text="No. KTP" textWrap="true" fontSize="13" color="#BDBDBD" />
+                <Label text="{{ nik }}" textWrap="true" fontSize="15" color="#8130ff" fontWeight="bold" />
+                
+                <Label text="Nama Lengkap" textWrap="true" fontSize="13" color="#BDBDBD" marginTop="10" />
+                <Label text="{{ fullname }}" textWrap="true" fontSize="15" color="#8130ff" fontWeight="bold" />
+                
+                <Label text="Kelamin" textWrap="true" fontSize="13" color="#BDBDBD" marginTop="10" />
+                <Label text="{{ kelamin }}" textWrap="true" fontSize="15" color="#8130ff" fontWeight="bold" />
+                
+                <Label text="Lahir" textWrap="true" fontSize="13" color="#BDBDBD" marginTop="10" />
+                <Label text="{{ lahir }}" textWrap="true" fontSize="15" color="#8130ff" fontWeight="bold" />
+                
+                <Label text="Provinsi" textWrap="true" fontSize="13" color="#BDBDBD" marginTop="10" />
+                <Label text="{{ provinsi }}" textWrap="true" fontSize="15" color="#8130ff" fontWeight="bold" />
+                
+                <Label text="Kota/Kab" textWrap="true" fontSize="13" color="#BDBDBD" marginTop="10" />
+                <Label text="{{ kotakab }}" textWrap="true" fontSize="15" color="#8130ff" fontWeight="bold" />
+                
+                <Label text="Kecamatan" textWrap="true" fontSize="13" color="#BDBDBD" marginTop="10" />
+                <Label text="{{ kecamatan }}" textWrap="true" fontSize="15" color="#8130ff" fontWeight="bold" />
+                
+                <Label text="Kode Pos" textWrap="true" fontSize="13" color="#BDBDBD" marginTop="10" />
+                <Label text="{{ kodepos }}" textWrap="true" fontSize="15" color="#8130ff" fontWeight="bold" />
+                
+                <Label text="Usia" textWrap="true" fontSize="13" color="#BDBDBD" marginTop="10" />
+                <Label text="{{ usia }}" textWrap="true" fontSize="15" color="#8130ff" fontWeight="bold" />
+                
+                <Label text="Ulang Tahun" textWrap="true" fontSize="13" color="#BDBDBD" marginTop="10" />
+                <Label text="{{ ultah }}" textWrap="true" fontSize="15" color="#8130ff" fontWeight="bold" />
+                
+                <Label text="Zodiak" textWrap="true" fontSize="13" color="#BDBDBD" marginTop="10" />
+                <Label text="{{ zodiak }}" textWrap="true" fontSize="15" color="#8130ff" fontWeight="bold" />
+
+                <Button text="CEK LAGI" tap="ceklagi" color="#FFF" backgroundColor="#8130ff" borderWidth="0" borderRadius="25" marginTop="35" />
+                <Button text="LIHAT RIWAYAT" tap="lihatriwayat" color="#8130ff" backgroundColor="#FFF" borderWidth="0" borderRadius="25" marginTop="10" />
+            </StackLayout>
+        </ScrollView>
+    </GridLayout>
+</Page>

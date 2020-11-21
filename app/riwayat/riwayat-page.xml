@@ -1,0 +1,26 @@
+<Page
+    navigatingTo="onNavigatingTo"  
+    xmlns="http://schemas.nativescript.org/tns.xsd">
+
+    <ActionBar>
+        <Label text="Riwayat"></Label>
+        <ActionItem tap="refreshPageTap" text="Segarkan halaman" android.position="popup" />
+        <ActionItem tap="clearAllTap" text="Bersihkan data riwayat" android.position="popup" />
+    </ActionBar>
+
+    <GridLayout rows="auto,*,*,*">
+        <!-- <SearchBar id="searchBar" row="0" hint="Search document ..." text="{{ qeyword }}" clear="onClear" fontSize="15" submit="onSubmit" /> -->
+        <ListView row="1" items="{{ items }}" itemTap="onItemTap" separatorColor="#9E9E9E" class="list-group" visibility="{{ isFound ? 'visible' : 'collapsed' }}">
+            <ListView.itemTemplate>
+                <StackLayout class="list-group-item">
+                    <Label text="{{ fullname }}" fontSize="13" textWrap="true" class="title" />
+                    <Label text="{{ nik }}" fontStyle="italic" color="#9E9E9E" textWrap="true" />
+                </StackLayout>
+            </ListView.itemTemplate>
+        </ListView> 
+        <GridLayout rows="auto,auto,auto,*" row="2" class="page__content" visibility="{{ isNotFound ? 'visible' : 'collapsed' }}">
+            <Label row="1" class="page__content-icon fas" text="&#xf1da;"></Label>
+            <Label row="2" class="page__content-placeholder" text="Data Riwayat Kosong!"></Label>
+        </GridLayout>
+    </GridLayout>
+</Page>

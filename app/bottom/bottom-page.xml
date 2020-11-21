@@ -1,0 +1,36 @@
+<Page
+    loaded="onLoaded"
+    actionBarHidden="true"
+    background="#17b4ff"
+    navigatingTo="onNavigatingTo"  
+    xmlns="http://schemas.nativescript.org/tns.xsd">
+    <BottomNavigation selectedIndex="{{ navIndex }}">
+        <TabStrip>
+            <TabStripItem class="navigation__item" tap="pencarianTap">
+                <Label text="Pencarian" />
+                <Image src="font://&#xf002;" class="fas t-36" />
+            </TabStripItem>
+            <TabStripItem class="navigation__item" tap="riwayatTap">
+                <Label text="Riwayat" />
+                <Image src="font://&#xf1da;" class="fas t-36" />
+            </TabStripItem>
+            <TabStripItem class="navigation__item">
+                <Label text="Infomasi" />
+                <Image src="font://&#xf059;" class="far t-36" />
+            </TabStripItem>
+            
+        </TabStrip>
+
+        <TabContentItem>
+            <Frame defaultPage="pencarian/pencarian-page" />
+        </TabContentItem>
+
+        <TabContentItem>
+            <Frame defaultPage="riwayat/riwayat-page" />
+        </TabContentItem>
+
+        <TabContentItem>
+            <Frame defaultPage="informasi/informasi-page" />
+        </TabContentItem>
+    </BottomNavigation>
+</Page>
