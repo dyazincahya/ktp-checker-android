@@ -48,4 +48,4 @@ tns build ios
 [kang-cahya.com](https://www.kang-cahya.com/)
 
 ### License
-[Apache License 2.0](https://github.com/dyazincahya/ktp-checker-android/blob/master/LICENSE)
+[MIT License](https://github.com/dyazincahya/ktp-checker-android/blob/main/LICENSE)
