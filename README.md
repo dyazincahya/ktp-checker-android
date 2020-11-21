@@ -37,6 +37,11 @@ tns build android
 tns build ios
 ```
 
+### Kredit
+- [Library NIK Parser - Ican Bachors](https://github.com/bachors/nik_parse.js)
+- [Font Icon - Fontawesome](https://fontawesome.com/)
+- [Icon - Flaticon](https://www.flaticon.com/)
+
 ### Author
 [kang-cahya.com](https://www.kang-cahya.com/)
 
