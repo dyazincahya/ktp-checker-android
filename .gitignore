@@ -7,6 +7,9 @@ platforms/
 *.js.map
 *.css
 
+# keystore
+*keystore
+
 # Logs
 logs
 *.log
