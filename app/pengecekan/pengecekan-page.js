@@ -1,7 +1,7 @@
 const Observable = require("tns-core-modules/data/observable").Observable;
 const TimerModule = require("tns-core-modules/timer");
 const NpModule = require('./../nik_parse.min');
-const LdHelper = require('./../localdb_helper');
+const lsHelper = require('./../localdb_helper');
 const LoadingIndicatorModule = require("@nstudio/nativescript-loading-indicator").LoadingIndicator;
 const Xloading = new LoadingIndicatorModule();
 const snackBarModule = require("@nstudio/nativescript-snackbar").SnackBar;
@@ -20,12 +20,14 @@ function searchMode(search=true){
     }
 }
 
+exports.onLoaded = function(){
+
+};
+
 exports.onNavigatingTo = function(args) {
     const page = args.object;
     context = new Observable();
 
-    context.set("fullname", "");
-    context.set("nik", "");
     searchMode();
     
     page.bindingContext = context;
@@ -47,7 +49,6 @@ exports.ceknoktp = function(){
         Xloading.show(gConfig.searchOption);
         TimerModule.setTimeout(() => {
             NpModule.nikParse(context.nik, function(result){
-                console.log(result);
                 if(result.status == "success"){
                     let data = result.data;
                     context.set("kelamin", data.kelamin);
@@ -60,8 +61,22 @@ exports.ceknoktp = function(){
                     context.set("ultah", data.tambahan.ultah);
                     context.set("zodiak", data.tambahan.zodiak);
                     data.fullname = context.fullname;
-                    LdHelper.insert(data);
-                    searchMode(false);
+                    
+                    let a = lsHelper.insert(data);
+                    if(a.success){
+                        searchMode(false);
+                    } else {
+                        snackbar.action({
+                            actionText: "OKE",
+                            actionTextColor: '#FFEB3B',
+                            snackText: a.message,
+                            textColor: '#FFFFFF',
+                            hideDelay: 5000,
+                            backgroundColor: '#333',
+                            maxLines: 15, // Optional, Android Only
+                            isRTL: false
+                        });
+                    }
                 } else { 
                     snackbar.action({
                         actionText: "OKE",
@@ -81,8 +96,8 @@ exports.ceknoktp = function(){
 };
 
 exports.ceklagi = function(){
-    context.set("fullname", "");
-    context.set("nik", "");
+    /* context.set("fullname", "");
+    context.set("nik", ""); */
     searchMode();
 };
 

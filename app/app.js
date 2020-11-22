@@ -1,9 +1,10 @@
 const application = require("tns-core-modules/application");
 const ModeLoadingIndicator = require('@nstudio/nativescript-loading-indicator').Mode;
 
+global.gLocalstorage = [];
 global.gConfig = {
     "searchOption": {
-        message: 'Mencari data...',
+        message: 'Sedang mengecek data...',
         margin: 10,
         dimBackground: true,
         color: '#FFFFFF',
@@ -16,7 +17,7 @@ global.gConfig = {
         }
     },
     "loadingOption": {
-        message: 'Memuat...',
+        message: 'Sedang memuat...',
         margin: 10,
         dimBackground: true,
         color: '#FFFFFF',
@@ -29,7 +30,7 @@ global.gConfig = {
         }
     },
     "cleaningOption": {
-        message: 'Sedang Membersihkan...',
+        message: 'Sedang membersihkan...',
         margin: 10,
         dimBackground: true,
         color: '#FFFFFF',

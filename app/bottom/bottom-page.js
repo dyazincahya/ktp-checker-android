@@ -1,7 +1,7 @@
 const appSettings = require("tns-core-modules/application-settings");
 const timerModule = require("tns-core-modules/timer");
 
-const pencarian = require("../pencarian/pencarian-page");
+const pengecekan = require("../pengecekan/pengecekan-page");
 const riwayat = require("../riwayat/riwayat-page");
 
 const Observable = require("tns-core-modules/data/observable").Observable;
@@ -45,6 +45,6 @@ exports.moveToRiwayat = function(){
 exports.riwayatTap = function(){
     riwayat.refreshPageTap();
 }
-exports.pencarianTap = function(){
-    pencarian.ceklagi();
+exports.pengecekanTap = function(){
+    pengecekan.ceklagi();
 }

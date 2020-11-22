@@ -1,4 +1,5 @@
 <Page
+    loaded="onLoaded"
     navigatingTo="onNavigatingTo"  
     xmlns="http://schemas.nativescript.org/tns.xsd">
 
@@ -8,9 +9,9 @@
         <ActionItem tap="clearAllTap" text="Bersihkan data riwayat" android.position="popup" />
     </ActionBar>
 
-    <GridLayout rows="auto,*,*,*">
+    <GridLayout rows="auto,auto,auto,auto" height="100%">
         <!-- <SearchBar id="searchBar" row="0" hint="Search document ..." text="{{ qeyword }}" clear="onClear" fontSize="15" submit="onSubmit" /> -->
-        <ListView row="1" items="{{ items }}" itemTap="onItemTap" separatorColor="#9E9E9E" class="list-group" visibility="{{ isFound ? 'visible' : 'collapsed' }}">
+        <ListView height="100%" row="1" items="{{ items }}" itemTap="onItemTap" separatorColor="#9E9E9E" class="list-group" visibility="{{ isFound ? 'visible' : 'collapsed' }}">
             <ListView.itemTemplate>
                 <StackLayout class="list-group-item">
                     <Label text="{{ fullname }}" fontSize="13" textWrap="true" class="title" />
@@ -18,7 +19,7 @@
                 </StackLayout>
             </ListView.itemTemplate>
         </ListView> 
-        <GridLayout rows="auto,auto,auto,*" row="2" class="page__content" visibility="{{ isNotFound ? 'visible' : 'collapsed' }}">
+        <GridLayout rows="auto,auto,auto,*" marginTop="100" row="2" class="page__content" visibility="{{ isNotFound ? 'visible' : 'collapsed' }}">
             <Label row="1" class="page__content-icon fas" text="&#xf1da;"></Label>
             <Label row="2" class="page__content-placeholder" text="Data Riwayat Kosong!"></Label>
         </GridLayout>

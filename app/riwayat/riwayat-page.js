@@ -1,13 +1,14 @@
 const Observable = require("tns-core-modules/data/observable").Observable;
 const ObservableArray = require("tns-core-modules/data/observable-array").ObservableArray;
 const TimerModule = require("tns-core-modules/timer");
-const LdHelper = require('./../localdb_helper');
+const lsHelper = require('./../localdb_helper');
 const LoadingIndicatorModule = require("@nstudio/nativescript-loading-indicator").LoadingIndicator;
 const Xloading = new LoadingIndicatorModule();
 const snackBarModule = require("@nstudio/nativescript-snackbar").SnackBar;
 const snackbar = new snackBarModule();
 
 var context;
+let framePage;
 var datalist = new ObservableArray([]);
 
 function dataFound(x=true){
@@ -21,12 +22,12 @@ function dataFound(x=true){
 }
 
 function loadData(){
-    let db = LdHelper.get();
+    let db = lsHelper.get();
     datalist.splice(0);
     if(db.success){
         if(db.data.length > 0){
             dataFound();
-            datalist.push(LdHelper.get().data);
+            datalist.push(lsHelper.get().data);
         } else {
             dataFound(false);
             datalist.push([]);
@@ -37,6 +38,10 @@ function loadData(){
     }
     context.set("items", datalist);
 }
+
+exports.onLoaded = function(args) {
+    framePage = args.object.frame; 
+};
 
 exports.onNavigatingTo = function(args) {
     const page = args.object;
@@ -67,7 +72,7 @@ exports.clearAllTap = function(){
         neutralButtonText: "Tidak"
     }).then((result) => {
         if(result) {
-            let db = LdHelper.drop();
+            let db = lsHelper.drop();
             if(db.success){
                 Xloading.show(gConfig.cleaningOption);
                 TimerModule.setTimeout(() => {
@@ -101,6 +106,22 @@ exports.clearAllTap = function(){
                     });
                 }, 1000);
             }
+        }
+    });
+};
+
+exports.onItemTap = (args) => {
+    let itemTap = args.view;
+    let itemTapData = itemTap.bindingContext;
+    
+    framePage.navigate({
+        moduleName: "riwayat/riwayat-detail-page",
+        context: { data: itemTapData },
+        animated: true,
+        transition: {
+            name: "slide",
+            duration: 200,
+            curve: "ease"
         }
     });
 };

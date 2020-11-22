@@ -8,7 +8,7 @@
       "version": "6.5.3"
     }
   },
-  "description": "Aplikasi pengecekan nomor KTP RI",
+  "description": "Aplikasi pengecekan nomor KTP warga indonesia",
   "license": "SEE LICENSE IN <your-license-filename>",
   "repository": "<fill-your-repository-here>",
   "scripts": {

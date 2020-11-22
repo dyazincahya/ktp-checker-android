@@ -6,8 +6,8 @@
     xmlns="http://schemas.nativescript.org/tns.xsd">
     <BottomNavigation selectedIndex="{{ navIndex }}">
         <TabStrip>
-            <TabStripItem class="navigation__item" tap="pencarianTap">
-                <Label text="Pencarian" />
+            <TabStripItem class="navigation__item" tap="pengecekanTap">
+                <Label text="pengecekan" />
                 <Image src="font://&#xf002;" class="fas t-36" />
             </TabStripItem>
             <TabStripItem class="navigation__item" tap="riwayatTap">
@@ -22,7 +22,7 @@
         </TabStrip>
 
         <TabContentItem>
-            <Frame defaultPage="pencarian/pencarian-page" />
+            <Frame defaultPage="pengecekan/pengecekan-page" />
         </TabContentItem>
 
         <TabContentItem>
