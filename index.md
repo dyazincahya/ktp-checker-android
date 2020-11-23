@@ -1,3 +1,4 @@
+<link rel="shortcut icon" type="image/x-icon" href="https://github.com/dyazincahya/ktp-checker-android/raw/main/screenshot/icon.png">
 <img src="https://github.com/dyazincahya/ktp-checker-android/raw/main/screenshot/7.png" width="1080">
 
 # KTP Checker Android
