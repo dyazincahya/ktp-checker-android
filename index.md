@@ -7,7 +7,7 @@ Aplikasi pengecekan nomor KTP berbasis android, 100% gratis, 100% mantap dan beb
 - [Download APK KTP-Checker (via Playstore - coming soon, is under review)](https://play.google.com/store/apps/details?id=com.kang.cahya.KtpChecker)
 
 ### Screenshoot
-<img src="https://github.com/dyazincahya/ktp-checker-android/blob/main/screenshot/1.png" width="200"> <img src="https://github.com/dyazincahya/ktp-checker-android/blob/main/screenshot/2.png" width="200"> <img src="https://github.com/dyazincahya/ktp-checker-android/blob/main/screenshot/3.png" width="200"> <img src="https://github.com/dyazincahya/ktp-checker-android/blob/main/screenshot/4.png" width="200"> <img src="https://github.com/dyazincahya/ktp-checker-android/blob/main/screenshot/5.png" width="200"> <img src="https://github.com/dyazincahya/ktp-checker-android/blob/main/screenshot/6.png" width="200">
+<img src="https://github.com/dyazincahya/ktp-checker-android/raw/main/screenshot/1.png" width="200"> <img src="https://github.com/dyazincahya/ktp-checker-android/raw/main/screenshot/2.png" width="200"> <img src="https://github.com/dyazincahya/ktp-checker-android/raw/main/screenshot/3.png" width="200"> <img src="https://github.com/dyazincahya/ktp-checker-android/raw/main/screenshot/4.png" width="200"> <img src="https://github.com/dyazincahya/ktp-checker-android/raw/main/screenshot/5.png" width="200"> <img src="https://github.com/dyazincahya/ktp-checker-android/raw/main/screenshot/6.png" width="200">
 
 ### Requirement To Install
 - NodeJS v12.16.1
