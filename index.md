@@ -5,7 +5,7 @@
 Aplikasi pengecekan nomor KTP berbasis android, 100% gratis, 100% mantap dan bebas iklan.
 
 ### Downloa APK (latest v1.1)
-- [Download APK KTP-Checker (via Github)](https://github.com/dyazincahya/ktp-checker-android/releases)
+- [Download APK KTP-Checker (via Github)](https://github.com/dyazincahya/ktp-checker-android/releases/download/v1.1/ktp-checker-v1.1.apk)
 - [Download APK KTP-Checker (via Playstore - coming soon, is under review)](https://play.google.com/store/apps/details?id=com.kang.cahya.KtpChecker)
 
 ### Screenshoot
