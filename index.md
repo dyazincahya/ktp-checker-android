@@ -50,5 +50,5 @@ tns build ios
 ### Author
 [kang-cahya.com](https://www.kang-cahya.com/)
 
-### License
+### License 
 [MIT License](https://github.com/dyazincahya/ktp-checker-android/blob/main/LICENSE)
