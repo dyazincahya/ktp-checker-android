@@ -46,6 +46,7 @@ tns build ios
 
 ### Credit
 - [Library NIK Parser - Ican Bachors](https://github.com/bachors/nik_parse.js)
+- [Local storage array for Nativescript](https://github.com/dyazincahya/local-storage-array-nativescript)
 - [Font Icon - Fontawesome](https://fontawesome.com/)
 - [Icon - Flaticon](https://www.flaticon.com/)
 
