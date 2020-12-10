@@ -1,6 +1,7 @@
 <link rel="shortcut icon" type="image/x-icon" href="https://github.com/dyazincahya/ktp-checker-android/raw/main/screenshot/icon.png">
 <img src="https://github.com/dyazincahya/ktp-checker-android/raw/main/screenshot/7.png" width="1080">
 
+[![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/K3K02WIPN)
 # KTP Checker Android
 Aplikasi pengecekan nomor KTP berbasis android, 100% gratis, 100% mantap dan bebas iklan.
 
