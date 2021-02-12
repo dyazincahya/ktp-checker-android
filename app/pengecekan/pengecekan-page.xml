@@ -5,11 +5,12 @@
     xmlns="http://schemas.nativescript.org/tns.xsd">
 
     <GridLayout rows="*,auto,auto,*">
-        <GridLayout rows="*,auto,auto,auto,auto,*" columns="30,*,30" row="1" visibility="{{ isSearchForm ? 'visible' : 'collapsed' }}">
+        <GridLayout rows="*,auto,auto,auto,auto,auto,*" columns="30,*,30" row="1" visibility="{{ isSearchForm ? 'visible' : 'collapsed' }}">
             <Image src="font://&#xf2c2;" color="#8130ff" width="75" decodeWidth="100" decodeHeight="100" loadMode="async" class="fas t-36" row="1" col="1" />
             <TextField hint="Nama Lengkap" text="{{ fullname }}" color="#616161" backgroundColor="#F5F5F5" paddingLeft="25" borderWidth="0" borderRadius="25" marginTop="30" returnKeyType="next" height="50" row="2" col="1" />
-            <TextField hint="No. KTP" text="{{ nik }}" color="#616161" backgroundColor="#F5F5F5" paddingLeft="25" borderWidth="0" borderRadius="25" keyboardType="number" height="50" row="3" col="1" />
-            <Button text="CEK NO KTP" tap="ceknoktp" color="#FFF" backgroundColor="#8130ff" borderWidth="0" borderRadius="25" marginTop="35" marginLeft="35" marginRight="35" row="4" col="1" />
+            <Label text="* Untuk keamanan data, pada bagian Nama Lengkap tidak harus sama dengan yang ada di KTP." textWrap="true" fontSize="11" paddingLeft="25" paddingRight="25" paddingBottom="10" color="#c62828" row="3" col="1" />
+            <TextField hint="No. KTP" text="{{ nik }}" color="#616161" backgroundColor="#F5F5F5" paddingLeft="25" borderWidth="0" borderRadius="25" keyboardType="number" height="50" row="4" col="1" />
+            <Button text="CEK NO KTP" tap="ceknoktp" color="#FFF" backgroundColor="#8130ff" borderWidth="0" borderRadius="25" marginTop="35" marginLeft="35" marginRight="35" row="5" col="1" />
         </GridLayout>
         <ScrollView height="100%" width="100%" orientation="vertical" marginTop="60" row="2" visibility="{{ isResult ? 'visible' : 'collapsed' }}">
             <StackLayout marginLeft="20" marginRight="20" marginBottom="70">

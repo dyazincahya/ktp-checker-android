@@ -7,54 +7,56 @@
     </ActionBar>
 
     <ScrollView height="100%" width="100%" orientation="vertical" marginTop="30">
-        <StackLayout marginLeft="20" marginRight="20" paddingBottom="50">
-            <Label text="FAQ" textWrap="true" fontSize="24" color="#616161" />
-            <Label text="Aplikasi apa ini?" textWrap="true" fontSize="13" color="#616161" marginTop="10" />
-            <Label text="Ini adalah aplikasi pengecekan nomor KTP." textWrap="true" fontSize="15" color="#8130ff" />
+        <StackLayout marginLeft="20" marginRight="20" paddingBottom="50" orientation="vertical">
+            <Label text="#DUKUNGAN" textWrap="true" fontSize="28" color="#E0E0E0" horizontalAlignment="right" />
+
+            <Label text="Berikan 5 Bintang" textWrap="true" fontSize="20" color="#212121" />
+            <Label text="Jangan lupa berikan Rating 5 Bintang di playstore sebagai salah satu bentuk dukungan pada aplikasi ini :)" textWrap="true" fontSize="13" color="#616161" />
+            <Button text="Beri 5 Bintang di Playstore Sekarang" fontWeight="bold" tap="ratenow" color="#FFFFFF" backgroundColor="#689F38" borderWidth="0" borderRadius="25" marginTop="10" />
+
+            <Label text="#TENTANG" textWrap="true" fontSize="28" color="#E0E0E0" marginTop="20" horizontalAlignment="right" />
+
+            <Label text="Nama" textWrap="true" fontSize="20" color="#212121" />
+            <Label text="KTP Checker" textWrap="true" fontSize="13" color="#616161" />
             
-            <Label text="Nama Aplikasi" textWrap="true" fontSize="13" color="#616161" marginTop="10" />
-            <Label text="KTP Checker" textWrap="true" fontSize="15" color="#8130ff" />
+            <Label text="Deskripsi" textWrap="true" fontSize="20" color="#212121" marginTop="10" />
+            <Label text="Aplikasi ini hanya untuk Mengecek dan Memvalidasi keaslian Nomor KTP, tidak lebih. Data di sajikan dalam format terbatas, tidak semua Data KTP dapat ditampilkan disini, dikarenakan satu dan lain hal, keamanan tentunya." textWrap="true" fontSize="13" color="#616161" />
             
-            <Label text="Kapan pertama kali aplikasi ini di release?" textWrap="true" fontSize="13" color="#616161" marginTop="10" />
-            <Label text="November 2020" textWrap="true" fontSize="15" color="#8130ff" />
+            <Label text="Rilis Pertama" textWrap="true" fontSize="20" color="#212121" marginTop="10" />
+            <Label text="22 November 2020 (v1.1)" textWrap="true" fontSize="13" color="#616161" />
             
-            <Label text="Siapa yang membuat ini?" textWrap="true" fontSize="13" color="#616161" marginTop="10" />
-            <Label text="kang-cahya.com" textWrap="true" fontSize="15" color="#8130ff" />
+            <Label text="Pembuat" textWrap="true" fontSize="20" color="#212121" marginTop="10" />
+            <Label text="Kang cahya" textWrap="true" fontSize="13" color="#616161" />
             
+            <Label text="Kenapa tidak ada iklan disini?" textWrap="true" fontSize="20" color="#212121" marginTop="10" />
+            <Label text="Karena aplikasi ini dibuat dengan Hati dan Cinta :) :*" textWrap="true" fontSize="13" color="#616161" />
+
+            <Label text="Jaminan aman mengecek Nomor KTP disini" textWrap="true" fontSize="20" color="#212121" marginTop="10" />
+            <Label text="Dijamin 100% aman, karena data tersimpan secara offline di handphone pengguna mansing-masing dan dapat di hapus kapan pun pengguna mau." textWrap="true" fontSize="13" color="#616161" />
+            <Label text="Kode program aplikasi ini ditulis dan dipublikasikan secara terbuka di https://github.com/dyazincahya/ktp-checker-android, kamu bisa coba periksa pada setiap kode program yang di tulis." textWrap="true" fontSize="13" color="#616161" />
+
+            <Label text="#KREDIT" textWrap="true" fontSize="28" color="#E0E0E0" marginTop="20" horizontalAlignment="right" />
             
-            <Label text="Kenapa tidak ada iklan disini?" textWrap="true" fontSize="13" color="#616161" marginTop="10" />
-            <Label text="Aplikasi ini dibuat dengan Hati dan Cinta, tidak sudi rasanya jika saya menanamkan iklan disini, tapi jika kamu ingin berdonasi dalam upaya mendukung aplikasi ini, boleh saja, bisa hubungi saja saya di kontak yang tertera dibawah :)" textWrap="true" fontSize="15" color="#8130ff" />
+            <Label text="Pembuat dan Pengembang" textWrap="true" fontSize="20" color="#212121" marginTop="10" />
+            <Label text="kang cahya" textWrap="true" fontSize="13" color="#616161" />
+            <Label text="kangcahyakeren@gmail.com" textWrap="true" fontSize="13" color="#616161" />
+            <Label text="https://github.com/dyazincahya/ktp-checker-android" textWrap="true" fontSize="13" color="#616161" />
 
-            <Label text="Apakah berani jamin aman jika mengecek nomor KTP disini?" textWrap="true" fontSize="13" color="#616161" marginTop="10" />
-            <Label text="Dijamin 100% mana, karena data tersimpan secara offline di handphone pengguna mansing-masing dan dapat di hapus kapan pun pengguna mau." textWrap="true" fontSize="15" color="#8130ff" />
-        
-            <Label text="Apa jaminan bahwa aplikasi ini aman?" textWrap="true" fontSize="13" color="#616161" marginTop="10" />
-            <Label text="Kode program aplikasi ini ditulis dan dipublikasikan secara terbuka di https://github.com/dyazincahya/ktp-checker-android, kamu bisa coba periksa pada setiap kode program yang di tulis." textWrap="true" fontSize="15" color="#8130ff" />
+            <Label text="Ikon Huruf" textWrap="true" fontSize="20" color="#212121" marginTop="10" />
+            <Label text="Fontawesome.com" textWrap="true" fontSize="13" color="#616161" />
 
-            <Label text="Infomasi lebih lanjut?" textWrap="true" fontSize="13" color="#616161" marginTop="10" />
-            <Label text="kamu bisa kirim email ke kangcahyakeren@gmail.com" textWrap="true" fontSize="15" color="#8130ff" />
+            <Label text="Ikon" textWrap="true" fontSize="20" color="#212121" marginTop="10" />
+            <Label text="Flaticon.com" textWrap="true" fontSize="13" color="#616161" />
 
-            <Label text="KREDIT" textWrap="true" fontSize="24" color="#616161" marginTop="20" />
-            
-            <Label text="Pembuat Dan Pengembang" textWrap="true" fontSize="13" color="#616161" marginTop="10" />
-            <Label text="kang cahya (kangcahyakeren@gmail.com)" textWrap="true" fontSize="15" color="#8130ff" />
-            <Label text="https://github.com/dyazincahya/ktp-checker-android" textWrap="true" fontSize="15" color="#8130ff" />
+            <Label text="Kerangka Kerja" textWrap="true" fontSize="20" color="#212121" marginTop="10" />
+            <Label text="Nativescript 6.5.0" textWrap="true" fontSize="13" color="#616161" />
 
-            <Label text="Ikon Huruf" textWrap="true" fontSize="13" color="#616161" marginTop="10" />
-            <Label text="Fontawesome.com" textWrap="true" fontSize="15" color="#8130ff" />
+            <Label text="Pembuat Pustaka NIK Parse" textWrap="true" fontSize="20" color="#212121" marginTop="10" />
+            <Label text="Ican Bachors" textWrap="true" fontSize="13" color="#616161" />
+            <Label text="https://github.com/bachors" textWrap="true" fontSize="13" color="#616161" />
 
-            <Label text="Ikon" textWrap="true" fontSize="13" color="#616161" marginTop="10" />
-            <Label text="Flaticon.com" textWrap="true" fontSize="15" color="#8130ff" />
-
-            <Label text="Kerangka Kerja" textWrap="true" fontSize="13" color="#616161" marginTop="10" />
-            <Label text="Nativescript 6.5.0" textWrap="true" fontSize="15" color="#8130ff" />
-
-            <Label text="Pembuat Pustaka NIK Parse" textWrap="true" fontSize="13" color="#616161" marginTop="10" />
-            <Label text="Ican Bachors" textWrap="true" fontSize="15" color="#8130ff" />
-            <Label text="https://github.com/bachors" textWrap="true" fontSize="15" color="#8130ff" />
-
-            <Label text="Bahasa Program" textWrap="true" fontSize="13" color="#616161" marginTop="10" />
-            <Label text="Javascript" textWrap="true" fontSize="15" color="#8130ff" />
+            <Label text="Bahasa Program" textWrap="true" fontSize="20" color="#212121" marginTop="10" />
+            <Label text="Javascript" textWrap="true" fontSize="13" color="#616161" />
             
         </StackLayout>
     </ScrollView>
