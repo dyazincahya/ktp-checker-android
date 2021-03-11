@@ -21,7 +21,7 @@ function searchMode(search=true){
     }
 }
 
-function checkConnection(){
+function checkConnection(notif=false){
     const type = connectivityModule.getConnectionType();
     let message = "";
     switch (type) {
@@ -51,40 +51,43 @@ function checkConnection(){
             context.set("connected", false);
             break;
     }
+    Xloading.hide();
 
-    snackbar.action({
-        actionText: "OKE",
-        actionTextColor: '#FFEB3B',
-        snackText: message,
-        textColor: '#FFFFFF',
-        hideDelay: 5000,
-        backgroundColor: '#333',
-        maxLines: 15, // Optional, Android Only
-        isRTL: false
-    });
+    if(notif){
+        snackbar.action({
+            actionText: "OKE",
+            actionTextColor: '#FFEB3B',
+            snackText: message,
+            textColor: '#FFFFFF',
+            hideDelay: 5000,
+            backgroundColor: '#333',
+            maxLines: 15, // Optional, Android Only
+            isRTL: false
+        });
+    }
 }
 
 function isConn(){
     const type = connectivityModule.getConnectionType();
     if(type === connectivityModule.connectionType.none ){
         context.set("connectedText", "Tidak terhubung ke jaringan Internet");
-        context.set("connected", false);
+        // context.set("connected", false);
         return false;
     } else if(type === connectivityModule.connectionType.wifi) {
         context.set("connectedText", "Sedang terhubung menggunakan koneksi WIFI");
-        context.set("connected", true);
+        // context.set("connected", true);
         return true;
     } else if(type === connectivityModule.connectionType.mobile){
         context.set("connectedText", "Sedang terhubung menggunakan koneksi Mobile");
-        context.set("connected", true);
+        // context.set("connected", true);
         return true;
     } else if(type === connectivityModule.connectionType.ethernet){
         context.set("connectedText", "Sedang terhubung menggunakan koneksi Hotspot");
-        context.set("connected", true);
+        // context.set("connected", true);
         return true;
     } else {
         context.set("connectedText", "Tidak terhubung ke jaringan Internet");
-        context.set("connected", false);
+        // context.set("connected", false);
         return false;
     }
 }
@@ -97,6 +100,7 @@ exports.onNavigatingTo = function(args) {
     const page = args.object;
     context = new Observable();
 
+    Xloading.show(gConfig.connectionOption);
     searchMode();
     checkConnection();
     
@@ -194,11 +198,12 @@ exports.ceknoktp = function(){
                 actionTextColor: '#FFEB3B',
                 snackText: "Mohon cek jaringan Internet kamu!",
                 textColor: '#FFFFFF',
-                hideDelay: 5000,
+                hideDelay: 3000,
                 backgroundColor: '#333',
                 maxLines: 15, // Optional, Android Only
                 isRTL: false
             });
+            context.set("connected", false);
             Xloading.hide();
         }, 1500);
     }
@@ -211,8 +216,7 @@ exports.ceklagi = function(){
 exports.recheckConnection = function(){
     Xloading.show(gConfig.connectionOption);
     TimerModule.setTimeout(() => {
-        checkConnection();
-        Xloading.hide();
+        checkConnection(true);
     }, 3000);
 };
 

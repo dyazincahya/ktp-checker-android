@@ -26,7 +26,7 @@
             <Label text="22 November 2020 (v1.1)" textWrap="true" fontSize="13" color="#616161" />
             
             <Label text="Versi Saat Ini" textWrap="true" fontSize="20" color="#212121" marginTop="10" />
-            <Label text="v1.3" textWrap="true" fontSize="13" color="#616161" />
+            <Label text="v1.4" textWrap="true" fontSize="13" color="#616161" />
             
             <Label text="Pembuat" textWrap="true" fontSize="20" color="#212121" marginTop="10" />
             <Label text="Kang cahya" textWrap="true" fontSize="13" color="#616161" />

@@ -65,7 +65,6 @@ function loadData(){
         datalist.push([]);
     }
     context.set("items", datalist);
-    console.log(datalist); 
 }
 
 exports.onLoaded = function(args) {
