@@ -1,5 +1,5 @@
 <link rel="shortcut icon" type="image/x-icon" href="https://github.com/dyazincahya/ktp-checker-android/raw/main/screenshot/icon.png">
-<img src="https://github.com/dyazincahya/ktp-checker-android/raw/main/screenshot/7.png" width="1080">
+<img src="https://github.com/dyazincahya/ktp-checker-android/raw/main/screenshot/banner.png" width="1080">
 
 [![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/K3K02WIPN)
 # KTP Checker Android
@@ -10,7 +10,7 @@ Aplikasi pengecekan nomor KTP berbasis android, 100% gratis, 100% mantap dan beb
 - [Download APK KTP-Checker (via Playstore)](https://play.google.com/store/apps/details?id=com.kang.cahya.KtpChecker)
 
 ### Screenshoot
-<img src="https://github.com/dyazincahya/ktp-checker-android/raw/main/screenshot/1.png" width="200"> <img src="https://github.com/dyazincahya/ktp-checker-android/raw/main/screenshot/2.png" width="200"> <img src="https://github.com/dyazincahya/ktp-checker-android/raw/main/screenshot/3.png" width="200"> <img src="https://github.com/dyazincahya/ktp-checker-android/raw/main/screenshot/4.png" width="200"> <img src="https://github.com/dyazincahya/ktp-checker-android/raw/main/screenshot/5.png" width="200"> <img src="https://github.com/dyazincahya/ktp-checker-android/raw/main/screenshot/6.png" width="200">
+<img src="https://github.com/dyazincahya/ktp-checker-android/raw/main/screenshot/1.png" width="200"> <img src="https://github.com/dyazincahya/ktp-checker-android/raw/main/screenshot/2.png" width="200"> <img src="https://github.com/dyazincahya/ktp-checker-android/raw/main/screenshot/3.png" width="200"> <img src="https://github.com/dyazincahya/ktp-checker-android/raw/main/screenshot/4.png" width="200"> <img src="https://github.com/dyazincahya/ktp-checker-android/raw/main/screenshot/5.png" width="200"> <img src="https://github.com/dyazincahya/ktp-checker-android/raw/main/screenshot/6.png" width="200"> <img src="https://github.com/dyazincahya/ktp-checker-android/raw/main/screenshot/7.png" width="200"> <img src="https://github.com/dyazincahya/ktp-checker-android/raw/main/screenshot/8.png" width="200">
 
 ### Requirement To Install
 - NodeJS v12.16.1
