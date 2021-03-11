@@ -3,6 +3,19 @@ const ModeLoadingIndicator = require('@nstudio/nativescript-loading-indicator').
 
 global.gLocalstorage = [];
 global.gConfig = {
+    "connectionOption": { 
+        message: 'Sedang mengecek jaringan internet...',
+        margin: 10,
+        dimBackground: true,
+        color: '#FFFFFF',
+        backgroundColor: '#FFFFFF',
+        userInteractionEnabled: true,
+        hideBezel: true, 
+        mode: ModeLoadingIndicator.Indeterminate,
+        android: {
+            cancelable: false,
+        }
+    },
     "searchOption": {
         message: 'Sedang mengecek data...',
         margin: 10,

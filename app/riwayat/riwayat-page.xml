@@ -13,10 +13,12 @@
         <!-- <SearchBar id="searchBar" row="0" hint="Search document ..." text="{{ qeyword }}" clear="onClear" fontSize="15" submit="onSubmit" /> -->
         <ListView height="100%" row="1" items="{{ items }}" itemTap="onItemTap" separatorColor="#9E9E9E" class="list-group" visibility="{{ isFound ? 'visible' : 'collapsed' }}">
             <ListView.itemTemplate>
-                <StackLayout class="list-group-item">
-                    <Label text="{{ fullname }}" fontSize="13" textWrap="true" class="title" />
-                    <Label text="{{ nik }}" fontStyle="italic" color="#9E9E9E" textWrap="true" />
-                </StackLayout>
+                <GridLayout class="list-group-item" columns="*,auto" rows="auto,auto,auto">
+                    <Label text="{{ 'KTP ' + status }}" textWrap="true" fontSize="10" marginTop="5" color="{{ statusColor }}" fontWeight="bold" row="0" col="1" />
+                    <Label text="{{ fullname }}" fontSize="13" textWrap="true" class="title" col="0" row="0" />
+                    <Label text="{{ nik }}" fontStyle="italic" color="#9E9E9E" textWrap="true" col="0" row="1" />
+                    <Label text="{{ 'Dicek pada ' + datechecker }}" color="#BDBDBD" textWrap="true" col="0" row="2" />
+                </GridLayout>
             </ListView.itemTemplate>
         </ListView> 
         <GridLayout rows="auto,auto,auto,*" marginTop="100" row="2" class="page__content" visibility="{{ isNotFound ? 'visible' : 'collapsed' }}">

@@ -9,40 +9,61 @@
     </ActionBar>
 
     <ScrollView height="100%" width="100%" orientation="vertical" marginTop="30">
-        <StackLayout marginLeft="20" marginRight="20" paddingBottom="70">
-            <Label text="No. KTP" textWrap="true" fontSize="13" color="#BDBDBD" />
-            <Label text="{{ nik }}" textWrap="true" fontSize="15" color="#8130ff" fontWeight="bold" />
+        <StackLayout marginLeft="20" marginRight="20" marginBottom="70">
+            <Label text="Status KTP" textWrap="true" fontSize="13" color="#BDBDBD" marginTop="10" />
+            <GridLayout columns="auto,auto">
+                <Image src="{{ isValid ? 'font://&#xf058;' : 'font://&#xf057;' }}" class="fas" width="15" color="{{ isValid ? '#4CAF50' : '#f44336' }}" col="0" />
+                <Label text="{{ ' ' + status }}" textWrap="true" fontSize="15" color="{{ statusColor }}" fontWeight="bold" col="1" />
+            </GridLayout>
+
+            <Label text="No. KTP" textWrap="true" fontSize="13" color="#BDBDBD" marginTop="10" />
+            <Label text="{{ nik }}" textWrap="true" fontSize="15" color="#9E9E9E" fontWeight="bold" />
             
             <Label text="Nama Lengkap" textWrap="true" fontSize="13" color="#BDBDBD" marginTop="10" />
-            <Label text="{{ fullname }}" textWrap="true" fontSize="15" color="#8130ff" fontWeight="bold" />
+            <Label text="{{ fullname }}" textWrap="true" fontSize="15" color="#9E9E9E" fontWeight="bold" />
             
-            <Label text="Kelamin" textWrap="true" fontSize="13" color="#BDBDBD" marginTop="10" />
-            <Label text="{{ kelamin }}" textWrap="true" fontSize="15" color="#8130ff" fontWeight="bold" />
+            <Label text="Dicek pada" textWrap="true" fontSize="13" color="#BDBDBD" marginTop="10" />
+            <Label text="{{ datechecker }}" textWrap="true" fontSize="15" color="#9E9E9E" fontWeight="bold" />
             
-            <Label text="Lahir" textWrap="true" fontSize="13" color="#BDBDBD" marginTop="10" />
-            <Label text="{{ lahir }}" textWrap="true" fontSize="15" color="#8130ff" fontWeight="bold" />
-            
-            <Label text="Provinsi" textWrap="true" fontSize="13" color="#BDBDBD" marginTop="10" />
-            <Label text="{{ provinsi }}" textWrap="true" fontSize="15" color="#8130ff" fontWeight="bold" />
-            
-            <Label text="Kota/Kab" textWrap="true" fontSize="13" color="#BDBDBD" marginTop="10" />
-            <Label text="{{ kotakab }}" textWrap="true" fontSize="15" color="#8130ff" fontWeight="bold" />
-            
-            <Label text="Kecamatan" textWrap="true" fontSize="13" color="#BDBDBD" marginTop="10" />
-            <Label text="{{ kecamatan }}" textWrap="true" fontSize="15" color="#8130ff" fontWeight="bold" />
-            
-            <Label text="Kode Pos" textWrap="true" fontSize="13" color="#BDBDBD" marginTop="10" />
-            <Label text="{{ kodepos }}" textWrap="true" fontSize="15" color="#8130ff" fontWeight="bold" />
-            
-            <Label text="Usia" textWrap="true" fontSize="13" color="#BDBDBD" marginTop="10" />
-            <Label text="{{ usia }}" textWrap="true" fontSize="15" color="#8130ff" fontWeight="bold" />
-            
-            <Label text="Ulang Tahun" textWrap="true" fontSize="13" color="#BDBDBD" marginTop="10" />
-            <Label text="{{ ultah }}" textWrap="true" fontSize="15" color="#8130ff" fontWeight="bold" />
-            
-            <Label text="Zodiak" textWrap="true" fontSize="13" color="#BDBDBD" marginTop="10" />
-            <Label text="{{ zodiak }}" textWrap="true" fontSize="15" color="#8130ff" fontWeight="bold" />
+            <StackLayout visibility="{{ isValid ? 'visible' : 'collapsed' }}">
+                <Label text="DATA KTP" textWrap="true" fontSize="24" color="#8130ff" marginTop="15" />
+                <Label text="DALAM FORMAT TERBATAS" textWrap="true" fontSize="13" color="#8130ff" />
 
+                <Label text="Kelamin" textWrap="true" fontSize="13" color="#BDBDBD" marginTop="10" />
+                <Label text="{{ kelamin }}" textWrap="true" fontSize="15" color="#9E9E9E" fontWeight="bold" />
+                
+                <Label text="Lahir" textWrap="true" fontSize="13" color="#BDBDBD" marginTop="10" />
+                <Label text="{{ lahir }}" textWrap="true" fontSize="15" color="#9E9E9E" fontWeight="bold" />
+                
+                <Label text="Provinsi" textWrap="true" fontSize="13" color="#BDBDBD" marginTop="10" />
+                <Label text="{{ provinsi }}" textWrap="true" fontSize="15" color="#9E9E9E" fontWeight="bold" />
+                
+                <Label text="Kota/Kab" textWrap="true" fontSize="13" color="#BDBDBD" marginTop="10" />
+                <Label text="{{ kotakab }}" textWrap="true" fontSize="15" color="#9E9E9E" fontWeight="bold" />
+                
+                <Label text="Kecamatan" textWrap="true" fontSize="13" color="#BDBDBD" marginTop="10" />
+                <Label text="{{ kecamatan }}" textWrap="true" fontSize="15" color="#9E9E9E" fontWeight="bold" />
+                
+                <Label text="Uniqcode" textWrap="true" fontSize="13" color="#BDBDBD" marginTop="10" />
+                <Label text="{{ uniqcode }}" textWrap="true" fontSize="15" color="#9E9E9E" fontWeight="bold" />
+                
+                <Label text="INFO TAMBAHAN" textWrap="true" fontSize="24" color="#8130ff" marginTop="15" />
+
+                <Label text="Kode Pos" textWrap="true" fontSize="13" color="#BDBDBD" marginTop="10" />
+                <Label text="{{ kodepos }}" textWrap="true" fontSize="15" color="#9E9E9E" fontWeight="bold" />
+                
+                <Label text="Pasaran" textWrap="true" fontSize="13" color="#BDBDBD" marginTop="10" />
+                <Label text="{{ pasaran }}" textWrap="true" fontSize="15" color="#9E9E9E" fontWeight="bold" />
+                
+                <Label text="Usia" textWrap="true" fontSize="13" color="#BDBDBD" marginTop="10" />
+                <Label text="{{ usia }}" textWrap="true" fontSize="15" color="#9E9E9E" fontWeight="bold" />
+                
+                <Label text="Ulang Tahun" textWrap="true" fontSize="13" color="#BDBDBD" marginTop="10" />
+                <Label text="{{ ultah }}" textWrap="true" fontSize="15" color="#9E9E9E" fontWeight="bold" />
+                
+                <Label text="Zodiak" textWrap="true" fontSize="13" color="#BDBDBD" marginTop="10" />
+                <Label text="{{ zodiak }}" textWrap="true" fontSize="15" color="#9E9E9E" fontWeight="bold" />
+            </StackLayout>>
         </StackLayout>
     </ScrollView>
 </Page>

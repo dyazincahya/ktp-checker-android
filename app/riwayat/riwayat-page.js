@@ -27,7 +27,35 @@ function loadData(){
     if(db.success){
         if(db.data.length > 0){
             dataFound();
-            datalist.push(lsHelper.get().data);
+            let data = lsHelper.get().data;
+            for (let i = 0; i < data.length; i++) {
+                if(typeof data[i].lahir !== 'undefined'){
+                    datalist.push({
+                        nik: data[i].nik,
+                        fullname: data[i].fullname,
+                        kelamin: data[i].kelamin,
+                        lahir: data[i].lahir,
+                        provinsi: data[i].provinsi,
+                        kotakab: data[i].kotakab,
+                        kecamatan: data[i].kecamatan,
+                        uniqcode: data[i].uniqcode,
+                        tambahan: data[i].tambahan,
+                        datechecker: data[i].datechecker,
+                        isValid: true,
+                        status: "VALID",
+                        statusColor: "#4CAF50"
+                    });
+                } else {
+                    datalist.push({
+                        nik: data[i].nik,
+                        fullname: data[i].fullname,
+                        datechecker: data[i].datechecker,
+                        isValid: false,
+                        status: "TIDAK VALID",
+                        statusColor: "#f44336"
+                    });
+                }
+            }
         } else {
             dataFound(false);
             datalist.push([]);
@@ -37,6 +65,7 @@ function loadData(){
         datalist.push([]);
     }
     context.set("items", datalist);
+    console.log(datalist); 
 }
 
 exports.onLoaded = function(args) {

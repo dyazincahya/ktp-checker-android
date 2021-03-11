@@ -209,3 +209,24 @@ exports.drop = function(xkey="ldkc"){
         };
     }
 };
+
+exports.getCurrentTime = function(){
+    var d = new Date();
+
+    var p = d.getFullYear(),
+        q = d.getMonth()+1,
+        r = d.getDate(),
+        s = d.getHours(),
+        t = d.getMinutes(),
+        u = d.getSeconds();
+
+    var months = ["Jan", "Feb", "Mar", "Apr", "Mei", "Jun", "Jul", "Agu", "Sep", "Okt", "Nov", "Des"],
+        monthName = months[d.getMonth()];
+
+    var days = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jum'at", "Sabtu"],
+        dayName = days[d.getDay()];
+
+    var result = dayName + ", " + r+"/"+monthName+"/"+p+" "+s+":"+t+":"+u;
+
+    return result;
+}
